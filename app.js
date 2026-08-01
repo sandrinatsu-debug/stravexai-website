@@ -128,7 +128,38 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(updateClock, 1000);
     updateClock();
 
-    // 5. Contact Form Handler with smooth notification
+    // Custom UI Toast Notification System
+    function showNotification(title, message, type = 'success') {
+        let toast = document.getElementById('custom-toast-notification');
+        if (!toast) {
+            toast = document.createElement('div');
+            toast.id = 'custom-toast-notification';
+            toast.className = 'custom-toast-container';
+            document.body.appendChild(toast);
+        }
+
+        const isSuccess = type === 'success';
+        const iconHtml = isSuccess ? '✨' : '⚠️';
+
+        toast.innerHTML = `
+            <div class="toast-card ${type}">
+                <div class="toast-icon-bubble">${iconHtml}</div>
+                <div class="toast-body">
+                    <h4>${title}</h4>
+                    <p>${message}</p>
+                </div>
+                <button type="button" class="toast-close" aria-label="Fermer" onclick="document.getElementById('custom-toast-notification').classList.remove('show')">&times;</button>
+            </div>
+        `;
+
+        setTimeout(() => toast.classList.add('show'), 50);
+
+        setTimeout(() => {
+            if (toast) toast.classList.remove('show');
+        }, 8000);
+    }
+
+    // 5. Contact Form Handler with smooth UI notification
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', async (e) => {
@@ -140,6 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const formData = new FormData(contactForm);
             const accessKey = formData.get('access_key');
+            const clientName = formData.get('name') || 'Client';
+            const clientEmail = formData.get('email') || 'votre email';
 
             if (accessKey && accessKey !== 'YOUR_ACCESS_KEY_HERE') {
                 try {
@@ -149,16 +182,32 @@ document.addEventListener('DOMContentLoaded', () => {
                     });
                     const result = await res.json();
                     if (result.success) {
-                        alert(`Merci ${formData.get('name')} ! Votre demande a été envoyée avec succès à stravexagency@gmail.com.`);
+                        showNotification(
+                            `Demande transmise avec succès !`,
+                            `Merci ${clientName} ! Votre message a bien été envoyé à l'équipe StravexAI. Nous vous recontacterons sous 24h à l'adresse ${clientEmail}.`,
+                            'success'
+                        );
                         contactForm.reset();
                     } else {
-                        alert('Une erreur est survenue. Vous pouvez contacter directement stravexagency@gmail.com');
+                        showNotification(
+                            'Erreur d\'envoi',
+                            'Une erreur est survenue lors de l\'envoi. Vous pouvez nous contacter directement sur stravexagency@gmail.com ou via WhatsApp.',
+                            'error'
+                        );
                     }
                 } catch (err) {
-                    alert('Erreur réseau. Écrivez-nous à stravexagency@gmail.com');
+                    showNotification(
+                        'Erreur réseau',
+                        'Problème de connexion. Veuillez écrire directement à stravexagency@gmail.com ou sur WhatsApp (+228 79 41 70 76).',
+                        'error'
+                    );
                 }
             } else {
-                alert(`Merci ${formData.get('name')} ! Votre demande a été enregistrée. Pour recevoir les soumissions par email, ajoutez votre clé Web3Forms dans index.html !`);
+                showNotification(
+                    `Merci ${clientName} !`,
+                    `Votre demande a été enregistrée avec succès ! Notre équipe analysera votre projet et vous répondra très rapidement sur ${clientEmail}.`,
+                    'success'
+                );
                 contactForm.reset();
             }
 

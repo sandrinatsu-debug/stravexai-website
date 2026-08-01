@@ -1594,3 +1594,91 @@ footer {
     0%, 100% { box-shadow: 0 10px 25px rgba(37, 211, 102, 0.5); }
     50% { box-shadow: 0 10px 35px rgba(37, 211, 102, 0.8), 0 0 25px rgba(37, 211, 102, 0.6); }
 }
+
+/* Custom UI Toast Notification Component */
+.custom-toast-container {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 10000;
+    max-width: 440px;
+    width: calc(100% - 3rem);
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.custom-toast-container.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.toast-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.25rem 1.4rem;
+    background: rgba(11, 16, 29, 0.96);
+    border: 1px solid rgba(52, 211, 153, 0.4);
+    border-radius: var(--radius-card);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85), 0 0 30px rgba(52, 211, 153, 0.25);
+    backdrop-filter: blur(20px);
+}
+
+.toast-card.error {
+    border-color: rgba(239, 68, 68, 0.5);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.85), 0 0 30px rgba(239, 68, 68, 0.25);
+}
+
+.toast-icon-bubble {
+    font-size: 1.4rem;
+    background: rgba(52, 211, 153, 0.15);
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    border: 1px solid rgba(52, 211, 153, 0.3);
+}
+
+.toast-card.error .toast-icon-bubble {
+    background: rgba(239, 68, 68, 0.15);
+    border-color: rgba(239, 68, 68, 0.3);
+}
+
+.toast-body {
+    flex: 1;
+}
+
+.toast-body h4 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-white);
+    margin-bottom: 0.3rem;
+}
+
+.toast-body p {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.45;
+}
+
+.toast-close {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    line-height: 1;
+    transition: color 0.2s ease;
+    padding: 0;
+    margin-left: 0.5rem;
+}
+
+.toast-close:hover {
+    color: var(--text-white);
+}
