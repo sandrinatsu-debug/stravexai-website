@@ -67,19 +67,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4. Contact Form Submission Handling
     if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
+        contactForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             
-            const name = document.getElementById('contact-name').value;
-            const email = document.getElementById('contact-email').value;
-            const subject = document.getElementById('contact-subject').value;
-            const message = document.getElementById('contact-message').value;
+            const submitBtn = document.getElementById('submit-btn');
+            const originalBtnText = submitBtn.textContent;
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Envoi en cours...';
 
-            // Simple user facing confirmation logic
-            // In a real application, we would POST this to a server endpoint
-            console.log('Demande de contact reçue:', { name, email, subject, message });
-            
-            alert(`Merci ${name} ! Votre message a bien été envoyé. Notre équipe vous recontactera sous 24h.`);
+            const formData = new FormData(contactForm);
+            const accessKey = formData.get('access_key');
+
+            // Web3Forms AJAX submission if access_key is configured
+            if (accessKey && accessKey !== 'YOUR_ACCESS_KEY_HERE') {
+                try {
+                    const response = await fetch('https://api.web3forms.com/submit', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    const result = await response.json();
+                    if (result.success) {
+                        alert(`Merci ${formData.get('name')} ! Votre message a été envoyé à stravexagency@gmail.com. Notre équipe vous recontactera sous 24h.`);
+                    } else {
+                        alert('Une erreur s\'est produite. Veuillez réessayer ou envoyer directement un email à stravexagency@gmail.com.');
+                    }
+                } catch (error) {
+                    alert('Erreur réseau. Vous pouvez nous écrire directement à stravexagency@gmail.com.');
+                }
+            } else {
+                // Friendly demonstration feedback when key is pending configuration
+                alert(`Merci ${formData.get('name')} ! Votre demande a été enregistrée. Pour recevoir ces messages directement dans votre boîte Gmail, ajoutez votre clé Web3Forms gratuite dans le code index.html !`);
+            }
+
+            submitBtn.disabled = false;
+            submitBtn.textContent = originalBtnText;
             closeModal();
         });
     }
