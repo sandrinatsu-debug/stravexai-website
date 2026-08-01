@@ -3,20 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>StravexAI | Création de SaaS, Applications & Formation IA sur Mesure</title>
-    <meta name="description" content="StravexAI développe des SaaS sur mesure via Vibe Coding, crée des applications web/mobiles, forme vos équipes à l'IA et automatise vos processus avec des agents WhatsApp à Lomé, Togo.">
+    <title>StravexAI | Agence IA, Développement de SaaS & Applications Sur Mesure</title>
+    <meta name="description" content="StravexAI est une agence d'IA et de développement spécialisée dans la création de SaaS sur mesure via Vibe Coding, l'ingénierie d'applications web/mobiles basées sur l'IA, l'automatisation par agents WhatsApp et la formation d'entreprises.">
+    
+    <!-- Google Fonts: Inter Tight & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Ambient background glows -->
-    <div class="glow-blur glow-1"></div>
-    <div class="glow-blur glow-2"></div>
-    <div class="glow-blur glow-3"></div>
+    <!-- Ambient background mesh glows -->
+    <div class="glow-blur glow-top-left"></div>
+    <div class="glow-blur glow-top-right"></div>
+    <div class="glow-blur glow-center"></div>
 
-    <!-- Header / Navigation -->
+    <!-- Header / Navigation (Floating Sticky Navbar inspired by ChatflowAI) -->
     <header id="main-header">
         <div class="container nav-wrapper">
             <a href="#" class="logo" id="header-logo">
@@ -29,13 +34,17 @@
                 <span></span>
             </button>
             
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#services" class="nav-link-item">Services</a></li>
-                <li><a href="#why-us" class="nav-link-item">Pourquoi nous ?</a></li>
-                <li><a href="#process" class="nav-link-item">Méthodologie</a></li>
-                <li><a href="#contact" class="nav-link-item">Contact</a></li>
-                <li><button class="cta-btn primary open-contact-btn">Commencer</button></li>
-            </ul>
+            <nav class="nav-links-container" id="nav-links-container">
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#procede" class="nav-link-item">Procédé</a></li>
+                    <li><a href="#services" class="nav-link-item">Services</a></li>
+                    <li><a href="#projets" class="nav-link-item">Projets</a></li>
+                    <li><a href="#why-us" class="nav-link-item">Pourquoi nous ?</a></li>
+                    <li><a href="#contact" class="nav-link-item highlight-link open-contact-btn">Contact ↗</a></li>
+                </ul>
+            </nav>
+
+            <a href="#contact" class="cta-btn primary-mint open-contact-btn header-cta-desktop">Commencer ↗</a>
         </div>
     </header>
 
@@ -44,36 +53,152 @@
         <canvas id="hero-canvas"></canvas>
         <div class="container">
             <div class="hero-content">
-                <div class="hero-tag">
-                    <span></span> Agence d'IA & Vibe Coding
-                </div>
-                <h1 class="gradient-text">Création de SaaS, Applications & Solutions IA sur Mesure</h1>
-                <p>Nous développons des SaaS innovants, concevons des applications sur mesure, formons vos équipes à l'IA et automatisons vos flux métiers pour propulser la croissance des entreprises et entrepreneurs.</p>
-                <div class="hero-buttons">
-                    <button class="cta-btn primary open-contact-btn">Lancer votre projet</button>
-                    <a href="#services" class="cta-btn secondary" style="display: inline-flex; align-items: center; justify-content: center;">Découvrir nos solutions</a>
+                <div class="hero-badge">
+                    <span class="badge-sparkle">✨</span> Agence d'IA & Développement d'Applications
                 </div>
                 
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <span class="stat-number gradient-accent-text">100%</span>
-                        <span class="stat-label">Sur mesure & Vibe Coding</span>
+                <h1 class="hero-title">
+                    L'IA & le Développement d'Applications <span class="highlight-mint">à votre service.</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    StravexAI transforme les entreprises en leaders technologiques. Nous créons des SaaS intelligents sur mesure, développons vos applications Web & Mobiles alimentées par l'IA et automatisons vos flux métiers grâce au Vibe Coding et aux agents autonomes.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#services" class="cta-btn primary-mint">Nos services ↗</a>
+                    <a href="#contact" class="cta-btn outline-glass open-contact-btn">Nous contacter ↗</a>
+                </div>
+
+                <div class="hero-metrics">
+                    <div class="metric-item">
+                        <span class="metric-val">100%</span>
+                        <span class="metric-lbl">Sur mesure & Vibe Coding</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number gradient-accent-text">+70%</span>
-                        <span class="stat-label">Rapidité de déploiement</span>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-val">+70%</span>
+                        <span class="metric-lbl">Vitesse de livraison</span>
                     </div>
-                    <div class="stat-item">
-                        <span class="stat-number gradient-accent-text">24/7</span>
-                        <span class="stat-label">Support & Suivi</span>
+                    <div class="metric-divider"></div>
+                    <div class="metric-item">
+                        <span class="metric-val">24/7</span>
+                        <span class="metric-lbl">Agents IA & Suivi</span>
                     </div>
                 </div>
             </div>
             
-            <div class="hero-visual">
-                <div class="visual-sphere-container">
+            <div class="hero-visual-card">
+                <div class="ai-hologram-box">
                     <div class="visual-sphere"></div>
-                    <div class="orbit"></div>
+                    <div class="orbit-ring ring-1"></div>
+                    <div class="orbit-ring ring-2"></div>
+                    <div class="pulse-node n1"></div>
+                    <div class="pulse-node n2"></div>
+                    <div class="pulse-node n3"></div>
+                    <div class="ai-widget-badge">
+                        <span class="dot-live"></span> StravexAI Engine Active
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Intro 360° Partner Banner (Inspired by ChatflowAI) -->
+    <section class="section partner-banner-section">
+        <div class="container">
+            <div class="glass-card partner-card">
+                <div class="partner-header">
+                    <span class="pill-tag">👋 Partenaire IA & Tech 360°</span>
+                    <span class="pill-tag glow-tag">✨ Innovation & Vibe Coding</span>
+                </div>
+                <h2>
+                    Nous combinons l'ingénierie d'intelligence artificielle et le développement d'applications sur mesure pour transformer vos idées en <span class="highlight-mint">produits numériques puissants</span>.
+                </h2>
+                <p>
+                    Que vous soyez une grande entreprise à la recherche d'automatisation ou un entrepreneur souhaitant créer un SaaS disruptif, StravexAI est votre studio technologique de confiance.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section "Notre procédé" (5 Grid Cards inspired by ChatflowAI) -->
+    <section class="section" id="procede">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Notre Procédé</span>
+                <h2>Une méthodologie claire et efficace en 5 étapes</h2>
+                <p>Comment nous accompagnons votre entreprise du cadrage stratégique au déploiement de votre solution IA.</p>
+            </div>
+            
+            <div class="procede-grid">
+                <!-- Card 01: Contact & Cadrage -->
+                <div class="glass-card procede-card">
+                    <span class="card-step-num">01</span>
+                    <h3>Contact & Cadrage</h3>
+                    <p>Analyse approfondie de vos besoins, étude de faisabilité technique et définition du périmètre de votre projet SaaS ou IA.</p>
+                    <div class="card-ui-mockup toggle-mockup">
+                        <div class="mock-toggle-bar">
+                            <span class="toggle-opt">Basique</span>
+                            <span class="toggle-opt active">Pro</span>
+                            <span class="toggle-opt">Sur Mesure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 02: Consulting & Stack Tech -->
+                <div class="glass-card procede-card">
+                    <span class="card-step-num">02</span>
+                    <h3>Consulting & Architecture</h3>
+                    <p>Choix des meilleurs modèles de LLM, sélection de la stack logicielle (Next.js, Python, OpenAI, Claude) et architecture sécurisée.</p>
+                    <div class="card-ui-mockup stack-icons-mockup">
+                        <span class="tech-chip">OpenAI</span>
+                        <span class="tech-chip">Python</span>
+                        <span class="tech-chip">Next.js</span>
+                        <span class="tech-chip">Claude 3.5</span>
+                        <span class="tech-chip">WhatsApp API</span>
+                    </div>
+                </div>
+
+                <!-- Card 03: Formation & Immersion -->
+                <div class="glass-card procede-card">
+                    <span class="card-step-num">03</span>
+                    <h3>Formation & Vibe Coding</h3>
+                    <p>Ateliers immersifs pour acculturer vos collaborateurs à l'utilisation des outils d'IA et aux méthodes d'ingénierie modernes.</p>
+                    <div class="card-ui-mockup code-snippet-mockup">
+                        <pre><code><span class="code-kw">import</span> stravex_ai
+<span class="code-var">agent</span> = stravex.deploy(mode=<span class="code-str">"vibe"</span>)
+agent.run_automation()</code></pre>
+                    </div>
+                </div>
+
+                <!-- Card 04: Intégration & Développement -->
+                <div class="glass-card procede-card wide-card">
+                    <span class="card-step-num">04</span>
+                    <h3>Intégration & Développement</h3>
+                    <p>Création rapide de vos applications Web et Mobiles, raccordement des agents WhatsApp et webhooks d'entreprise.</p>
+                    <div class="card-ui-mockup progress-mockup">
+                        <div class="progress-item">
+                            <span>Rapidité de livraison</span>
+                            <div class="progress-bar"><div class="fill" style="width: 95%;"></div></div>
+                        </div>
+                        <div class="progress-item">
+                            <span>Sécurité & Conformité</span>
+                            <div class="progress-bar"><div class="fill" style="width: 100%;"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 05: Devenez Leader en IA -->
+                <div class="glass-card procede-card wide-card">
+                    <span class="card-step-num">05</span>
+                    <h3>Devenez Leader en IA & Tech</h3>
+                    <p>Livraison clés en main, support continu 24/7 et mise à jour régulière de vos modèles d'IA pour garder une longueur d'avance.</p>
+                    <div class="card-ui-mockup leader-badge-mockup">
+                        <div class="leader-pill">
+                            <span class="trophy-icon">🏆</span> Leader IA & Tech Certifié
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -83,102 +208,169 @@
     <section class="section" id="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag gradient-accent-text">Nos Expertises</span>
-                <h2>Des solutions technologiques de pointe pour votre succès</h2>
-                <p>De la création de logiciels SaaS sur mesure à l'automatisation par agents IA et la formation d'équipes, découvrez notre gamme d'expertises.</p>
+                <span class="section-badge">Nos Services</span>
+                <h2>Des expertises de pointe pour vos projets d'avenir</h2>
+                <p>Découvrez nos 3 piliers de compétences combinant ingénierie IA, création d'applications et formation pratique.</p>
             </div>
             
-            <div class="services-grid">
-                <!-- Service 1: SaaS & Vibe Coding -->
-                <div class="glass-card service-card">
-                    <div class="service-image-container">
-                        <img src="service_saas.png" alt="Développement de SaaS & Vibe Coding" class="service-card-img">
+            <div class="services-grid-3col">
+                <!-- Service 1: Audit & Conseil IA -->
+                <div class="glass-card service-col-card">
+                    <div class="service-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
                     </div>
-                    <h3>Développement SaaS & Vibe Coding</h3>
-                    <p>Conception et architecture rapide de logiciels SaaS sur mesure pour entreprises et entrepreneurs grâce à notre maîtrise avancée du Vibe Coding et des moteurs d'IA.</p>
-                    <ul class="service-features">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            SaaS 100% personnalisés
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Développement agile & Vibe Coding
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Architecture Cloud prête pour l'échelle
-                        </li>
+                    <h3>Audit, Conseil & Strastégie IA</h3>
+                    <p>Nous diagnostiquons les processus de votre entreprise pour y intégrer intelligemment l'IA et maximiser la productivité globale.</p>
+                    
+                    <!-- Graph Visual Mockup -->
+                    <div class="service-preview-box graph-preview">
+                        <div class="graph-header">
+                            <span>Efficacité opérationnelle</span>
+                            <span class="stat-green">+85%</span>
+                        </div>
+                        <div class="graph-bars">
+                            <span style="height: 35%"></span>
+                            <span style="height: 55%"></span>
+                            <span style="height: 70%"></span>
+                            <span style="height: 95%" class="active-bar"></span>
+                        </div>
+                    </div>
+
+                    <ul class="feature-checklist">
+                        <li>Diagnostic d'automatisation</li>
+                        <li>Sélection d'outils et LLM adaptés</li>
+                        <li>Cadrage stratégique sur mesure</li>
                     </ul>
                 </div>
 
-                <!-- Service 2: Applications Web/Mobiles -->
-                <div class="glass-card service-card">
-                    <div class="service-image-container">
-                        <img src="service_apps.png" alt="Applications Web et Mobiles" class="service-card-img">
+                <!-- Service 2: Applications & SaaS (IA + Vibe Coding) -->
+                <div class="glass-card service-col-card highlight-card">
+                    <div class="service-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                     </div>
-                    <h3>Applications Sur Mesure & Propres</h3>
-                    <p>Création d'applications web et mobiles haute performance sur mesure, ainsi que le déploiement sur le marché de nos propres solutions propriétaires innovantes.</p>
-                    <ul class="service-features">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Applications Web & Mobiles modernes
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Déploiement direct sur le marché
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Expérience utilisateur (UX) ultra soignée
-                        </li>
+                    <h3>Développement SaaS & Apps Web/Mobiles</h3>
+                    <p>Conception sur mesure d'applications Web et Mobiles intelligentes, ainsi que le déploiement sur le marché de nos propres SaaS propriétaires innovants.</p>
+                    
+                    <!-- App Mockup Visual -->
+                    <div class="service-preview-box app-preview">
+                        <div class="app-preview-nav">
+                            <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+                            <span class="app-title-text">Stravex App Studio</span>
+                        </div>
+                        <div class="app-preview-body">
+                            <div class="app-card-mini">AI Mobile & Web Apps</div>
+                        </div>
+                    </div>
+
+                    <ul class="feature-checklist">
+                        <li>SaaS 100% personnalisés & évolutifs</li>
+                        <li>Applications Web & Mobiles basées sur l'IA</li>
+                        <li>Développement de produits propriétaires</li>
                     </ul>
                 </div>
 
-                <!-- Service 3: Formation & Accompagnement IA -->
-                <div class="glass-card service-card">
-                    <div class="service-image-container">
-                        <img src="service_training.png" alt="Formation IA d'Entreprise" class="service-card-img">
+                <!-- Service 3: Automatisation, WhatsApp & Formation -->
+                <div class="glass-card service-col-card">
+                    <div class="service-icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
                     </div>
-                    <h3>Formation & Initiation à l'IA</h3>
-                    <p>Accompagnement et formation pratique de vos équipes à l'utilisation de l'intelligence artificielle, au Vibe Coding et aux outils d'automatisation d'entreprise.</p>
-                    <ul class="service-features">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Initiation & Ateliers immersifs
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Apprentissage du Vibe Coding
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Accroissement rapide de la productivité
-                        </li>
+                    <h3>Agents WhatsApp & Formations IA</h3>
+                    <p>Agents virtuels WhatsApp disponibles 24/7 interconnectés avec votre CRM, accompagnés de formations pratiques pour vos équipes.</p>
+                    
+                    <!-- Chat Assistant Mockup -->
+                    <div class="service-preview-box chat-preview">
+                        <div class="chat-msg user">Comment automatiser mes ventes ?</div>
+                        <div class="chat-msg bot">Agent Stravex: Configuration de votre bot WhatsApp + CRM en cours...</div>
+                    </div>
+
+                    <ul class="feature-checklist">
+                        <li>Bots WhatsApp connectés à vos API</li>
+                        <li>Formations pratiques au Vibe Coding</li>
+                        <li>Support & accompagnement continu</li>
                     </ul>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Service 4: Automatisation & WhatsApp -->
-                <div class="glass-card service-card">
-                    <div class="service-image-container">
-                        <img src="service_automation.png" alt="Automatisation & Chatbots WhatsApp" class="service-card-img">
+    <!-- Projects Section (Interactive Split-Screen inspired by ChatflowAI) -->
+    <section class="section" id="projets">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Nos Projets</span>
+                <h2>Des réalisations concrètes et impactantes</h2>
+                <p>Survolez ou cliquez sur nos projets pour découvrir les détails de nos dernières réalisations.</p>
+            </div>
+            
+            <div class="projects-split-layout">
+                <!-- Left Column: Project List -->
+                <div class="projects-list">
+                    <div class="project-item active" data-project="0">
+                        <div class="project-item-meta">
+                            <span class="project-year">2026</span>
+                            <h4>Agents IA pour E-Commerce & Vente</h4>
+                        </div>
+                        <span class="arrow-link">↗</span>
                     </div>
-                    <h3>Automatisation & Agents WhatsApp</h3>
-                    <p>Interconnexion complète de vos processus internes et déploiement d'agents IA conversationnels WhatsApp personnalisés et reliés à vos systèmes.</p>
-                    <ul class="service-features">
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Agents WhatsApp 24h/24 & 7j/7
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Automatisation des flux opérationnels
-                        </li>
-                        <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            Intégration API, CRM & Webhooks
-                        </li>
-                    </ul>
+
+                    <div class="project-item" data-project="1">
+                        <div class="project-item-meta">
+                            <span class="project-year">2026</span>
+                            <h4>Tokpa Market (Marketplace E-Commerce)</h4>
+                        </div>
+                        <span class="arrow-link">↗</span>
+                    </div>
+
+                    <div class="project-item" data-project="2">
+                        <div class="project-item-meta">
+                            <span class="project-year">2025</span>
+                            <h4>SaaS de Gestion de Scolarité</h4>
+                        </div>
+                        <span class="arrow-link">↗</span>
+                    </div>
+
+                    <div class="project-item" data-project="3">
+                        <div class="project-item-meta">
+                            <span class="project-year">2025</span>
+                            <h4>SaaS de Gestion de Pharmacie</h4>
+                        </div>
+                        <span class="arrow-link">↗</span>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Mockup Display -->
+                <div class="project-preview-display glass-card">
+                    <div class="mockup-frame">
+                        <div class="mockup-header">
+                            <span class="mockup-dot"></span>
+                            <span class="mockup-dot"></span>
+                            <span class="mockup-dot"></span>
+                            <span id="project-display-url" class="mockup-url">https://stravex.ai/projects/whatsapp-agent</span>
+                        </div>
+                        <div class="mockup-content">
+                            <div class="project-badge-tag" id="project-display-category">Automatisation & IA</div>
+                            <h3 id="project-display-title">Agent IA WhatsApp Enterprise</h3>
+                            <p id="project-display-desc">Agent conversationnel WhatsApp sur mesure relié à l'API OpenAI et au CRM client pour le traitement automatisé des demandes client 24h/24.</p>
+                            
+                            <div class="project-stats-mini">
+                                <div class="p-stat">
+                                    <span class="p-stat-val" id="project-stat-1">10k+</span>
+                                    <span class="p-stat-lbl">Messages traités/jour</span>
+                                </div>
+                                <div class="p-stat">
+                                    <span class="p-stat-val" id="project-stat-2">99.8%</span>
+                                    <span class="p-stat-lbl">Taux de réponse</span>
+                                </div>
+                            </div>
+                            
+                            <div class="project-tech-tags" id="project-display-tags">
+                                <span>Python</span>
+                                <span>WhatsApp Business API</span>
+                                <span>OpenAI</span>
+                                <span>FastAPI</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -260,63 +452,70 @@
         </div>
     </section>
 
-    <!-- Methodology / Process Section -->
-    <section class="section" id="process">
+    <!-- Contact Block / Form Section -->
+    <section class="section contact-section" id="contact">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag gradient-accent-text">Méthodologie</span>
-                <h2>De l'idée au produit déployé</h2>
-                <p>Notre démarche en 4 étapes pour créer, valider et déployer votre SaaS ou solution IA.</p>
-            </div>
-            
-            <div class="process-timeline">
-                <!-- Step 1 -->
-                <div class="process-step">
-                    <div class="step-number-bubble">1</div>
-                    <div class="glass-card step-card">
-                        <h3>Cahier des charges & Ateliers IA</h3>
-                        <p>Analyse de vos besoins spécifiques, cadrage des fonctionnalités du SaaS ou de l'application et définition de la feuille de route.</p>
+            <div class="glass-card contact-main-card">
+                <div class="contact-grid">
+                    <div class="contact-info-side">
+                        <span class="section-badge">Contactez-nous</span>
+                        <h2>Parlons de votre projet <span class="highlight-mint">dès aujourd'hui.</span></h2>
+                        <p>Vous avez une idée de SaaS, un besoin d'application sur mesure ou souhaitez automatiser votre entreprise ? Remplissez ce formulaire pour recevoir une réponse rapide sous 24h.</p>
+                        
+                        <div class="contact-details-box">
+                            <div class="c-detail">
+                                <span class="c-icon">✉️</span>
+                                <div>
+                                    <span class="c-lbl">Email direct</span>
+                                    <a href="mailto:stravexagency@gmail.com" class="c-link">stravexagency@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="c-detail">
+                                <span class="c-icon">📍</span>
+                                <div>
+                                    <span class="c-lbl">Localisation</span>
+                                    <span class="c-val">Lomé, Togo (Interventions globales)</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <!-- Step 2 -->
-                <div class="process-step">
-                    <div class="step-number-bubble">2</div>
-                    <div class="glass-card step-card">
-                        <h3>Vibe Coding & Développement</h3>
-                        <p>Création rapide du produit, prototypage interactif, intégration des moteurs d'IA et tests d'ergonomie.</p>
-                    </div>
-                </div>
-                
-                <!-- Step 3 -->
-                <div class="process-step">
-                    <div class="step-number-bubble">3</div>
-                    <div class="glass-card step-card">
-                        <h3>Déploiement & Automatisation</h3>
-                        <p>Mise en ligne sur des serveurs sécurisés, raccordement des agents WhatsApp et interconnexion de vos API métiers.</p>
-                    </div>
-                </div>
-                
-                <!-- Step 4 -->
-                <div class="process-step">
-                    <div class="step-number-bubble">4</div>
-                    <div class="glass-card step-card">
-                        <h3>Formation des équipes & Scalabilité</h3>
-                        <p>Formation pratique de vos collaborateurs et suivi des performances pour assurer la montée en charge progressive de votre solution.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Contact Block -->
-    <section class="contact-section" id="contact">
-        <div class="container">
-            <div class="cta-block">
-                <div class="cta-block-content">
-                    <h2>Prêt à développer votre SaaS ou intégrer l'IA dans votre entreprise ?</h2>
-                    <p>Discutez de votre projet avec notre équipe d'experts et obtenez un diagnostic technologique gratuit.</p>
-                    <button class="cta-btn primary open-contact-btn">Nous contacter</button>
+                    <div class="contact-form-side">
+                        <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                            <input type="hidden" name="subject" value="Nouveau projet depuis StravexAI">
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="contact-name">Nom complet</label>
+                                    <input type="text" id="contact-name" name="name" class="form-control" placeholder="Votre nom" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email">Email professionnel</label>
+                                    <input type="email" id="contact-email" name="email" class="form-control" placeholder="exemple@entreprise.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-service">Service concerné</label>
+                                <select id="contact-service" name="service" class="form-control" required>
+                                    <option value="" disabled selected>Sélectionnez un service...</option>
+                                    <option value="saas">Développement SaaS & Vibe Coding</option>
+                                    <option value="apps">Application Web / Mobile Sur Mesure (IA)</option>
+                                    <option value="whatsapp">Agent IA WhatsApp & Automatisation</option>
+                                    <option value="training">Formation & Initiation IA</option>
+                                    <option value="consulting">Audit & Conseil Stratégique</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contact-message">Description du projet</label>
+                                <textarea id="contact-message" name="message" class="form-control" rows="4" placeholder="Parlez-nous de vos objectifs..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="cta-btn primary-mint full-width-btn" id="submit-btn">Envoyer ma demande ↗</button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -324,97 +523,37 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container footer-grid">
-            <div class="footer-col">
+        <div class="container footer-content-row">
+            <div class="footer-brand">
                 <a href="#" class="logo">
                     <img src="logo.png" alt="StravexAI" class="logo-img">
                 </a>
-                <p>Agence d'ingénierie IA, développement de SaaS sur mesure, création d'applications et formation pratique à Lomé, Togo.</p>
+                <p>Agence d'IA & Développement d'Applications et SaaS sur mesure.</p>
             </div>
-            
-            <div class="footer-col">
-                <h4>Plan du site</h4>
-                <ul class="footer-links">
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#why-us">Pourquoi nous ?</a></li>
-                    <li><a href="#process">Méthodologie</a></li>
-                </ul>
+
+            <div class="footer-links-group">
+                <a href="#procede">Procédé</a>
+                <a href="#services">Services</a>
+                <a href="#projets">Projets</a>
+                <a href="#why-us">Pourquoi Nous</a>
+                <a href="#contact">Contact</a>
             </div>
-            
-            <div class="footer-col">
-                <h4>Informations</h4>
-                <ul class="footer-info">
-                    <li class="info-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        <a href="mailto:stravexagency@gmail.com">stravexagency@gmail.com</a>
-                    </li>
-                    <li class="info-item">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        Lomé, Togo
-                    </li>
-                </ul>
-            </div>
-            
-            <div class="footer-col">
-                <h4>Newsletter</h4>
-                <p>Recevez nos derniers conseils sur le Vibe Coding, les SaaS et l'intelligence artificielle.</p>
-                <form class="newsletter-form" id="newsletter-form" onsubmit="event.preventDefault(); alert('Inscription réussie !'); this.reset();">
-                    <input type="email" placeholder="Votre email" class="form-control" required>
-                    <button type="submit" aria-label="S'abonner">Ok</button>
-                </form>
+
+            <div class="footer-widget-time">
+                <span class="live-dot"></span>
+                <span id="footer-clock">Lomé, Togo • --:--:-- GMT</span>
             </div>
         </div>
-        
-        <div class="container footer-bottom">
+
+        <div class="container footer-bottom-row">
             <p>&copy; 2026 StravexAI. Tous droits réservés.</p>
             <div class="social-links">
-                <a href="#" class="social-link" aria-label="Twitter">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
-                </a>
-                <a href="#" class="social-link" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
-                </a>
+                <a href="#" class="social-icon" aria-label="LinkedIn">LinkedIn</a>
+                <a href="#" class="social-icon" aria-label="Twitter">Twitter/X</a>
+                <a href="#" class="social-icon" aria-label="GitHub">GitHub</a>
             </div>
         </div>
     </footer>
-
-    <!-- Interactive Contact Modal -->
-    <div class="contact-modal" id="contact-modal">
-        <div class="contact-overlay" id="contact-overlay"></div>
-        <div class="contact-modal-container">
-            <button class="close-modal" id="close-modal" aria-label="Fermer la modal">&times;</button>
-            <div class="contact-modal-header">
-                <h3>Parlons de votre projet</h3>
-                <p>Remplissez ce formulaire et notre équipe vous recontactera sous 24 heures.</p>
-            </div>
-            <!-- Web3Forms Integration Ready -->
-            <form class="contact-form" id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-                <!-- Replace with your free Web3Forms access key -->
-                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                <input type="hidden" name="subject" value="Nouveau message depuis le site StravexAI">
-                <input type="hidden" name="from_name" value="StravexAI Site Web">
-                
-                <div class="form-group">
-                    <label for="contact-name">Nom complet</label>
-                    <input type="text" id="contact-name" name="name" class="form-control" placeholder="Ex: Jean Dupont" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact-email">Email professionnel</label>
-                    <input type="email" id="contact-email" name="email" class="form-control" placeholder="Ex: jean@entreprise.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact-subject">Sujet</label>
-                    <input type="text" id="contact-subject" name="project_subject" class="form-control" placeholder="Ex: Projet SaaS ou Formation IA" required>
-                </div>
-                <div class="form-group">
-                    <label for="contact-message">Message</label>
-                    <textarea id="contact-message" name="message" class="form-control" placeholder="Décrivez succinctement votre besoin..." required></textarea>
-                </div>
-                <button type="submit" class="cta-btn primary form-submit-btn" id="submit-btn">Envoyer la demande</button>
-            </form>
-        </div>
-    </div>
 
     <!-- Scripts -->
     <script src="neural-net.js"></script>

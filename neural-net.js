@@ -30,7 +30,6 @@
         mouse.y = e.clientY - rect.top;
     });
 
-    // Handle Leave
     window.addEventListener('mouseleave', () => {
         mouse.x = null;
         mouse.y = null;
