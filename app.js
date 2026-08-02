@@ -1,4 +1,31 @@
 // StravexAI Interactive Scripts (ChatflowAI Style Features & Interactivity)
+
+// 0. Intro Preloader Handler (ChatflowAI Inspired)
+const initPreloader = () => {
+    const preloader = document.getElementById('preloader');
+    if (!preloader) return;
+
+    const dismissPreloader = () => {
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                if (preloader && preloader.parentNode) {
+                    preloader.parentNode.removeChild(preloader);
+                }
+            }, 900);
+        }, 1200);
+    };
+
+    if (document.readyState === 'complete') {
+        dismissPreloader();
+    } else {
+        window.addEventListener('load', dismissPreloader);
+        setTimeout(dismissPreloader, 2500);
+    }
+};
+
+initPreloader();
+
 document.addEventListener('DOMContentLoaded', () => {
 
     // 1. Mobile Menu Toggle
